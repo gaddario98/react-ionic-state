@@ -1,0 +1,10 @@
+{
+  "name": "@gaddario98/react-ionic-state",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "peerDependencies": {
+    "@ionic/storage": "*",
+    "lz-string": "*",
+    "react": "*"
+  }
+}
