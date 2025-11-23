@@ -1,14 +1,42 @@
 {
   "name": "@gaddario98/react-ionic-state",
-  "version": "1.0.2",
+  "version": "1.0.21",
+  "type": "module",
   "main": "dist/index.js",
-  "peerDependencies": {
-    "@ionic/storage": "*",
-    "lz-string": "*",
-    "react": "*"
-  },
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/rollup-plugin-peer-deps-external": "^2",
+    "babel-plugin-react-compiler": "1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rollup": "^4.40.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "@ionic/storage": "^4.0.0",
+    "lz-string": "^1.5.0",
+    "react": ">=18.0.0 <20.0.0"
+  },
+  "dependencies": {
+    "@gaddario98/react-state": "^1.0.15"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -17,8 +45,22 @@
       "default": "./dist/index.js"
     }
   },
-  "type": "module",
-  "scripts": {
-    "build": "rollup -c rollup.config.js"
-  }
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaddario98/react-ionic-state"
+  },
+  "keywords": [
+    "react-ionic",
+    "ionic",
+    "react",
+    "state",
+    "storage",
+    "gaddario98"
+  ],
+  "author": "Giosuè Addario",
+  "bugs": {
+    "url": "https://github.com/gaddario98/react-ionic-state/issues"
+  },
+  "homepage": "https://github.com/gaddario98/react-ionic-state#readme"
 }
